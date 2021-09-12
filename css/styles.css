@@ -211,6 +211,9 @@ ul {
 .contacts-address-item {
   margin-top: 9px;
 }
+.address-footer {
+  flex-grow: 1;
+}
 
 /*секция Герой*/
 
@@ -383,13 +386,6 @@ ul {
   background-color: #ffffff;
 }
 
-/*.team-item {
-  margin-right: 30px;
-}
-.team-item:nth-child(4n) {
-  margin-right: 0;
-}*/
-
 .team-title {
   color: var(--title-text-color);
   font-weight: 500;
@@ -481,7 +477,6 @@ ul {
 .footer-container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
 .social-footer {
   margin-left: 70px;
@@ -717,7 +712,176 @@ ul {
   color: #2196f3;
 }
 
-/* Фуер форма */
+/*Форма модального окна*/
+
+.form {
+  width: 100%;
+  padding: 40px;
+}
+.form-title {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.43;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.form-group-more {
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-group-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .form-group-icon {
+  fill: #2196f3;
+}
+
+.form-input:focus {
+  border: 1px solid #2196f3;
+  outline: none;
+}
+
+.textarea {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  min-height: 40px;
+  min-width: 448px;
+  padding-left: 42px;
+  margin: 0;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #757575;
+
+  margin-bottom: 4px;
+}
+
+.form-textarea {
+  display: block;
+  resize: none;
+
+  min-height: 120px;
+  min-width: 448px;
+  padding: 12px 16px;
+  margin: 0;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.form-textarea:focus::placeholder {
+  color: var(--accent-color);
+}
+
+.form-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  min-width: 200px;
+  height: 50px;
+  border: 0px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-button:hover,
+.form-button:focus {
+  background-color: #188ce8;
+}
+
+.form-checkbox {
+  margin-bottom: 30px;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-right: 7px;
+}
+.checkbox-input:checked + .checkbox-label .icon {
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+
+  fill: #ffffff;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+}
+
+.checkbox-label-text {
+  text-decoration: underline var(--accent-color);
+  color: var(--accent-color);
+}
+/* Футер форма */
 .subscription-form {
   margin-left: 93px;
 }
@@ -735,7 +899,6 @@ ul {
 
 .subscription {
   display: flex;
-  justify-content: space-between;
   position: relative;
 }
 
